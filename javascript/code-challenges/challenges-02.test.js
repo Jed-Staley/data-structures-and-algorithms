@@ -8,9 +8,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 ------------------------------------------------------------------------------------------------ */
 
-const raisedToTheThird = (arr) => {
-  return arr.map(num => Math.pow(num, 3));
-};
+const raisedToTheThird = arr => arr.map(num => Math.pow(num, 3));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -18,9 +16,7 @@ CHALLENGE 2
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
-const addOne = (arr) => {
-  return arr.map(num => num + 1);
-};
+const addOne = (arr) => arr.map(num => num + 1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
