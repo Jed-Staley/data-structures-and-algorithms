@@ -132,7 +132,28 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let results = [];
+  arr.forEach((element) => {
+    let result = '';
+    let divisBy3 = false;
+    if (element % 3 === 0) {
+      result = 'Fizz';
+      divisBy3 = true;
+    }
+    if (element % 5 === 0) {
+      if (divisBy3) {
+        result += ' Buzz';
+      } else {
+        result += 'Buzz';
+      }
+    }
+    if (result === '') {
+      results.push(element);
+    } else {
+      results.push(result);
+    }
+  });
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -186,7 +207,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
