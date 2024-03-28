@@ -33,7 +33,8 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  let regex = /and/;
+  return arr.filter((str) => regex.test(str));
 };
 
 /* ------------------------------------------------------------------------------------------------
