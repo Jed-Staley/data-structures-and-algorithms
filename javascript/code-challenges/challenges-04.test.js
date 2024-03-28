@@ -47,10 +47,7 @@ Ensure that the original people array and stuff objects are unchanged
 
 ------------------------------------------------------------------------------------------------ */
 
-const setState = (arr, obj) => {
-  // Solution code here...
-};
-
+const setState = (arr, obj) => ({people: [...arr], stuff: {...obj}});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
