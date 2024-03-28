@@ -45,9 +45,7 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const oddValues = (arr) => {
-  // Solution code here...
-};
+const oddValues = arr => arr.filter((num) => num % 2 === 1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
