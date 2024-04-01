@@ -102,9 +102,10 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
-};
+const returnNames = arr => arr.reduce((runningArr, obj) => {
+  runningArr.push(obj.name);
+  return runningArr;
+}, []);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
