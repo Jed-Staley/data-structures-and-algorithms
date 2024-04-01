@@ -278,9 +278,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStats = (snorlaxData) => {
-  // Solution code here...
-};
+const extractStats = snorlaxData => snorlaxData.stats.reduce((obj, stat) => Object.assign(obj, { [stat.stat.name]: stat.baseStat }), {});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
