@@ -44,9 +44,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = arr => arr.reduce((runningSum) => runningSum + 1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
