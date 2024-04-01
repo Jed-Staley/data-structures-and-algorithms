@@ -115,8 +115,13 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  // Solution code here...
+const reversedString = str => {
+  // MDN web docs says that Array.prototype.reduce is a generic method and therefore works on array-like values such as strings, but when I tried that it said that str.reduce isn't a function, hence lines 120-123.
+  let strToArr = [];
+  for (let i = 0; i < str.length; i++) {
+    strToArr.push(str[i]);
+  }
+  return strToArr.reduce((runningStr, char) => char + runningStr, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
