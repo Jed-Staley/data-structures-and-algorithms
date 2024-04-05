@@ -30,9 +30,8 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
-const findMax = (matrix) => {
-  // Solution code here...
-};
+
+const findMax = matrix => matrix.reduce((highestNum, subArr) => (highestNum < subArr.reduce((highestNumInSubArr, num) => (highestNumInSubArr < num) ? num : highestNumInSubArr, 0)) ? subArr.reduce((highestNumInSubArr, num) => (highestNumInSubArr < num) ? num : highestNumInSubArr) : highestNum, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
