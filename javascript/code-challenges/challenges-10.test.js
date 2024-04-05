@@ -47,9 +47,8 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
-const totalSum = (matrix) => {
-  // Solution code here...
-};
+
+const totalSum = matrix => matrix.reduce((totalSum, subArr) => totalSum + subArr.reduce((subArrSum, num) => subArrSum + num, 0), 0);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,8 +74,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let totals = [];
+  for (let i = 0; i < stores[0].length; i++) {
+    let hourlyTotal = 0;
+    for (let j = 0; j < stores.length; j++) {
+      hourlyTotal += stores[j][i];
+    }
+    totals.push(hourlyTotal);
+  }
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
