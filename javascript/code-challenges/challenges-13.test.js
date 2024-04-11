@@ -116,7 +116,7 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = input => /^[oO]ct/.test(input);
+const matchMonth = input => /^[oO]ct(ober)*$/.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
