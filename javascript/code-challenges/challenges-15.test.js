@@ -109,9 +109,7 @@ Here is an example of the input:
 This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBy = (property, arr) => {
-  // Solution code here...
-};
+const sortBy = (property, arr) => arr.sort((obj1, obj2) => (obj1[property] > obj2[property]) ? 1 : -1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -125,9 +123,7 @@ http://www.insecure.com returns false because the URL is not secure
 https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
-const isSecure = (url) => {
-  // Solution code here...
-};
+const isSecure = url => /^https:\/\//.test(url);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
