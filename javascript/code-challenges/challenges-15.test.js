@@ -93,9 +93,7 @@ let starWarsData = [{
   gender: 'n/a'
 }];
 
-let biggerThanLuke = (arr) => {
-  // Solution code here...
-};
+let biggerThanLuke = arr => (arr.length === 0) ? '' : arr.filter((obj) => Number(obj.mass) > Number(arr[0].mass)).map((obj) => obj.name).join(' - ');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
