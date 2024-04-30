@@ -24,4 +24,8 @@ To run your tests
 
 ##### Class 01: Array Reverse
 
-- ![README.md for Array Reverse](./javascript/arrays/reverse/READMD.md)
+- ![README.md for Array Reverse](./javascript/arrays/reverse/README.md)
+
+##### Class 02: Array Insert Shift
+
+- ![README.md for Array Insert Shift](./javascript/arrays/insertShift/README.md)
