@@ -29,3 +29,7 @@ To run your tests
 ##### Class 02: Array Insert Shift
 
 - ![README.md for Array Insert Shift](./javascript/arrays/insertShift/README.md)
+
+##### Class 03: Binary Search
+
+- ![READMe.md for Binary Search](./javascript/arrays/binary-search/README.md)
