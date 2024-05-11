@@ -99,6 +99,24 @@ class LinkedList {
     str += 'NULL';
     return str;
   }
+
+  zipLists(linkedList) {
+    const result = new LinkedList();
+    let dynamicHead1 = this.head;
+    let dynamicHead2 = linkedList.head;
+    while (dynamicHead1 && dynamicHead2) {
+      result.append(dynamicHead1.data);
+      dynamicHead1 = dynamicHead1.pointer;
+      result.append(dynamicHead2.data);
+      dynamicHead2 = dynamicHead2.pointer;
+    }
+    let finalHead = result.head;
+    while (finalHead.pointer) {
+      finalHead = finalHead.pointer;
+    }
+    finalHead.pointer = dynamicHead1 ? dynamicHead1 : dynamicHead2;
+    return result;
+  }
 }
 
 module.exports = LinkedList;
