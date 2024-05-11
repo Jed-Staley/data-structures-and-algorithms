@@ -93,3 +93,33 @@ describe('Linked List Class 06', () => {
     expect(testLL.toString()).toEqual('{ 3rd Node } -> { 2nd Node } -> { 1st Node } -> { 0th Node } -> NULL');
   });
 });
+
+describe('Linked List Class 07', () => {
+  it('Where k is greater than the length of the linked list', () => {
+    const testLL = createTestLinkedList();
+    expect(testLL.kthFromEnd(4)).toEqual(undefined);
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    const testLL = createTestLinkedList();
+    expect(testLL.kthFromEnd(3)).toEqual(undefined);
+  });
+
+  it('Where k is not a nonnegative integer', () => {
+    const testLL = createTestLinkedList();
+    expect(testLL.kthFromEnd(-1)).toEqual(undefined);
+    expect(testLL.kthFromEnd(2.5)).toEqual(undefined);
+    expect(testLL.kthFromEnd('Hello World')).toEqual(undefined);
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    const testLL = new LinkedList();
+    testLL.insert('1st Node');
+    expect(testLL.kthFromEnd(0)).toEqual(undefined);
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const testLL = createTestLinkedList();
+    expect(testLL.kthFromEnd(1)).toEqual('2nd Node');
+  });
+});

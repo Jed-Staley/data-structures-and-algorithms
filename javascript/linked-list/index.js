@@ -55,6 +55,19 @@ class LinkedList {
     }
   }
 
+  kthFromEnd(k) {
+    let length = this.length();
+    if (k >= length || k < 0 || k !== Math.floor(k) || length < 2) {
+      return undefined;
+    } else {
+      let dynamicHead = this.head;
+      for (let i = 0; i < (length - (k + 1)); i++) {
+        dynamicHead = dynamicHead.pointer;
+      }
+      return dynamicHead.data;
+    }
+  }
+
   includes(value) {
     let dynamicHead = this.head;
     while (dynamicHead) {
@@ -64,6 +77,16 @@ class LinkedList {
       dynamicHead = dynamicHead.pointer;
     }
     return false;
+  }
+
+  length() {
+    let length = 0;
+    let dynamicHead = this.head;
+    while(dynamicHead) {
+      length++;
+      dynamicHead = dynamicHead.pointer;
+    }
+    return length;
   }
 
   toString() {
