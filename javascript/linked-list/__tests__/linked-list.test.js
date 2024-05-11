@@ -17,7 +17,7 @@ const arrayToLinkedList = (arr) => {
     linkedList.insert(arr[i]);
   }
   return linkedList;
-}
+};
 
 describe('Linked List', () => {
   it('Can successfully instantiate an empty linked list', () => {
