@@ -33,3 +33,21 @@ To run your tests
 ##### Class 03: Binary Search
 
 - ![READMe.md for Binary Search](./javascript/arrays/binary-search/README.md)
+
+##### Class 05: Linked List
+
+- ![README.md for Linked List](./javascript/linked-list/README.md)
+
+#### Module 3: Stacks and Queues
+
+##### Class 11: Pseudo Queue
+
+- ![README.md for Pseudo Queue](./javascript/stack/class-11/README.md)
+
+##### Class 12: Animal Shelter
+
+- ![README.md for Animal Shelter](./javascript/stack/class-12/README.md)
+
+##### Class 13: Brackets
+
+- ![README.md for Brackets](./javascript/stack/class-13/README.md)
