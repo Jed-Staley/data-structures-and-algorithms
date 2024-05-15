@@ -30,7 +30,7 @@ class Stack {
   }
 
   isEmpty() {
-    return (this.top !== null);
+    return (this.top === null);
   }
 }
 
