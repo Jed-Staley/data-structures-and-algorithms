@@ -51,3 +51,7 @@ To run your tests
 ##### Class 13: Brackets
 
 - ![README.md for Brackets](./javascript/stack/class-13/README.md)
+
+##### Class 14: Duck Duck Goose
+
+- ![README.md for Duck Duck Goose](./javascript/stack/class-14/README.md)
