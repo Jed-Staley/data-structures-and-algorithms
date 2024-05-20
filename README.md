@@ -55,3 +55,7 @@ To run your tests
 ##### Class 14: Duck Duck Goose
 
 - ![README.md for Duck Duck Goose](./javascript/stack/class-14/README.md)
+
+##### Class 15: Binary Search Tree
+
+- ![README.md for Binary Search Tree](./javascript/stack/class-15/README.md)
