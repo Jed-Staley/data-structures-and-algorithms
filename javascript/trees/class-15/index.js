@@ -13,51 +13,47 @@ class BinaryTree {
     this.root = null;
   }
 
-  preOrder() {
-    const arr = [];
+  #retrieve(order, node, logsArray) {
+    if (node) {
+      const readNode = () => logsArray.push(node.data);
+      const searchLeft = () => this.#retrieve(order, node.left, logsArray);
+      const searchRight = () => this.#retrieve(order, node.right, logsArray);
 
-    function retrieve(node) {
-      if (node) {
-        arr.push(node.data);
-        retrieve(node.left);
-        retrieve(node.right);
+      switch(order) {
+        case 'pre':
+          readNode();
+          searchLeft();
+          searchRight();
+          break;
+        case 'in':
+          searchLeft();
+          readNode();
+          searchRight();
+          break;
+        case 'post':
+          searchLeft();
+          searchRight();
+          readNode();
+          break;
       }
     }
+  }
 
-    retrieve(this.root);
-
+  preOrder() {
+    const arr = [];
+    this.#retrieve('pre', this.root, arr);
     return arr;
   }
 
   inOrder() {
     const arr = [];
-
-    function retrieve(node) {
-      if (node) {
-        retrieve(node.left);
-        arr.push(node.data);
-        retrieve(node.right);
-      }
-    }
-
-    retrieve(this.root);
-
+    this.#retrieve('in', this.root, arr);
     return arr;
   }
 
   postOrder() {
     const arr = [];
-
-    function retrieve(node) {
-      if (node) {
-        retrieve(node.left);
-        retrieve(node.right);
-        arr.push(node.data);
-      }
-    }
-
-    retrieve(this.root);
-
+    this.#retrieve('post', this.root, arr);
     return arr;
   }
 }
@@ -67,45 +63,48 @@ class BinarySearchTree extends BinaryTree {
     super();
   }
 
-  add(value) {
-    if (!this.root) {
-      this.root = new Node(value);
-      return;
-    }
-
+  #findParent(value) {
     function search(node) {
       if (node) {
-        if (value === node.data) { return false; }
-        let newBranch = (value < node.data) ? node.left : node.right;
-        if (search(newBranch)) {
-          if (value < node.data) {
-            node.left = new Node(value);
+        if (value === node.data) {
+          return false;
+        } else {
+          const ladderValue = search((value < node.data) ? node.left : node.right);
+          if (ladderValue) {
+            return ladderValue;
           } else {
-            node.right = new Node(value);
+            return node;
           }
         }
-        return false;
       } else {
-        return true;
+        return false;
       }
     }
 
-    search(this.root);
-    return;
+    const parent = search(this.root);
+    return (parent) ? parent : null;
+  }
+
+  add(value) {
+    const parent = this.#findParent(value);
+    if (parent) {
+      const branch = (value < parent.data) ? 'left' : 'right';
+      if (!parent[branch]) {
+        parent[branch] = new Node(value);
+      }
+    } else {
+      this.root = new Node(value);
+    }
   }
 
   contains(value) {
-    function search(node) {
-      if (node) {
-        if (value === node.data) { return true; }
-        let newBranch = (value < node.data) ? node.left : node.right;
-        return search(newBranch);
-      } else {
-        return false;
-      }
+    const parent = this.#findParent(value);
+    if (parent) {
+      const branch = (value < parent.data) ? 'left' : 'right';
+      return !!parent[branch];
+    } else {
+      return value === this.root.data;
     }
-
-    return search(this.root);
   }
 }
 
