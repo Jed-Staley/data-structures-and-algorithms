@@ -1,24 +1,19 @@
 'use strict';
 
 function insert(sorted, value) {
-  let i = 0;
-  while (i < sorted.length && sorted[i] > value) {
-    i++;
+  let i = sorted.length - 1;
+  while (i >= 0 && sorted[i] > value) {
+    sorted[i + 1] = sorted[i];
+    i--;
   }
-  while (i < sorted.length) {
-    let temp = sorted[i];
-    sorted[i] = value;
-    value = temp;
-    i++;
-  }
-  sorted.push(value);
+  sorted[i + 1] = value;
 }
 
 function insertionSort(input) {
   if (input.length === 0) return [];
   let sorted = [input[0]];
-  for (let i = 0; i < (input.length - 1); i++) {
-    insert(sorted, input[i + 1]);
+  for (let i = 1; i < input.length; i++) {
+    insert(sorted, input[i]);
   }
   return sorted;
 }
