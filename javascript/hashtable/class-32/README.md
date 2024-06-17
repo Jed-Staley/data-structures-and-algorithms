@@ -4,6 +4,10 @@ This file defines a function to find the intersection of values in two binary tr
 
 ## Process
 
+## Whiteboard
+
+[Whiteboard](./tree-intersection.png)
+
 ### Overview
 
 The `tree_intersection` function identifies the common values present in both binary trees. The implementation uses a hashtable to efficiently track the values encountered during the traversal of the trees.
