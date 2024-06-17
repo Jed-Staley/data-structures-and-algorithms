@@ -4,6 +4,10 @@ This file defines a function to detect the first repeated word in a string using
 
 ## Process
 
+### Whiteboard
+
+[Whiteboard](./repeated-word.png)
+
 ### Overview
 
 The `repeatedWord` function identifies the first word that repeats in a given string. The implementation uses a hashtable to efficiently track the words encountered during the iteration over the string.
