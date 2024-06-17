@@ -4,6 +4,10 @@ This file defines a function to perform a left join on two hash tables using the
 
 ## Process
 
+### Whiteboard
+
+[Whiteboard](./left-join.png)
+
 ### Overview
 
 The `leftJoin` function takes two hash tables as input and returns an array that contains all the keys from the first hash table and their corresponding values from both hash tables. If a key from the first hash table does not exist in the second hash table, the corresponding value from the second hash table will be `null`.
