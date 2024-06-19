@@ -5,6 +5,10 @@ This file defines a function to reverse a linked list. The function is implement
 Below is a screenshot of the challenge
 [Challenge](./challenge-37.png)
 
+## Author
+
+Jedidiah Staley
+
 ## Process
 
 ### Whiteboard
@@ -58,3 +62,7 @@ To run the tests, ensure you have Jest installed and run the following command:
 ```bash
 npm test reverse-list.test.js
 ```
+
+## Credits
+
+All tests were written by OpenAI's ChatGPT 4o.
