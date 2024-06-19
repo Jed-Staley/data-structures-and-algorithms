@@ -1,4 +1,4 @@
-const Stack = require('../../../stacks-and-queues/class-10/index');
+const { Stack } = require('../../../stacks-and-queues/class-10/index');
 const lowestInStack = require('../index');
 
 describe('lowestInStack', () => {

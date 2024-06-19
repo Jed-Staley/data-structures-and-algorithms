@@ -2,11 +2,11 @@
 
 function lowestInStack(stack) {
   if (stack.peek()) {
-    let current = stack.pop();
+    let current = stack.pop().value;
     let lowest = current;
     while (stack.peek()) {
-      current = stack.pop();
-      lowest = current > lowest ? current : lowest;
+      current = stack.pop().value;
+      lowest = (current < lowest) ? current : lowest;
     }
     return lowest;
   }
